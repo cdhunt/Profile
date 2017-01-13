@@ -8,15 +8,13 @@
     Requires NameIt and posh-git Modules as well as the Test-Administrator funciton.
 #>
 
-$SessionTitleName = Invoke-Generate '[Adjective][Noun]'
-
 if (Test-Administrator) {
-    $SessionTitle = 'Administrator: PowerShell [' + $ProfileVariables.SessionTitleName + ']'
+    $SessionTitle = 'Administrator: PowerShell [' + $SessionTitleName + ']'
 }
 else
 {
-    $SessionTitle = 'PowerShell [' + $ProfileVariables.SessionTitleName + ']'
+    $SessionTitle = 'PowerShell [' + $SessionTitleName + ']'
 }
 
 $Host.UI.RawUI.WindowTitle = $SessionTitle
-$Global:GitPromptSettings.EnableWindowTitle = "posh~git ~ [$($ProfileVariables.SessionTitleName)]"
+$Global:GitPromptSettings.EnableWindowTitle = "posh~git ~ [$($SessionTitleName)]"

@@ -1,5 +1,6 @@
-﻿$ProfileVariables = DATA -supportedCommand Invoke-Generate {
-    @{'SessionTitleName' = Invoke-Generate '[Adjective][Noun]'}
+﻿$SessionTitleName = Invoke-Generate '[Adjective][Noun]'
+
+$ProfileVariables = DATA -supportedCommand Invoke-Generate {
     @{'AnsiShaddow' = @'
 
 
@@ -12,6 +13,7 @@
 
 '@}
 }
+
 
 Import-Module Profile
 

@@ -11,9 +11,9 @@ function global:prompt
 {
     Write-Host ''
     if (Test-Administrator) {
-        Write-Host "[$($ProfileVariables.SessionTitleName)] " -NoNewline -ForegroundColor Yellow
+        Write-Host "[$SessionTitleName] " -NoNewline -ForegroundColor Yellow
     } else {
-        Write-Host "[$($ProfileVariables.SessionTitleName)] " -NoNewline -ForegroundColor DarkGray
+        Write-Host "[$SessionTitleName] " -NoNewline -ForegroundColor DarkGray
     }
     Write-Host ($pwd.ProviderPath) -ForegroundColor DarkGray -NoNewline
 
