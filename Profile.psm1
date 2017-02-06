@@ -1,6 +1,7 @@
 Import-Module posh-git
 Import-Module PowerShellHumanizer
 Import-Module NameIt
+Import-Module CETWin10Toolkit
 
 . "$PSScriptRoot\Functions\Test-Administrator.ps1"
 . "$PSScriptRoot\Functions\AudioSetup.ps1"
