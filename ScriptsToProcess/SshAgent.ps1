@@ -6,4 +6,7 @@
 .NOTES
     Requires the posh-git Module.
 #>
-Start-SshAgent -Quiet
+
+if (-not (Get-Process -Name pageant) {
+    Start-SshAgent -Quiet
+}
